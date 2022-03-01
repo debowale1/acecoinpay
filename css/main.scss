@@ -6,3 +6,60 @@
 html {
   font-size: 16px;
 }
+
+.wrapper {
+  font-family: $poppins;
+  max-width: 1200px;
+  padding-top: 6em;
+  padding: 3em;
+  background-color: #fff;
+  position: relative;
+  margin: 0 auto;
+}
+
+.form {
+  &-header {
+    @include setFlex(flex, center, space-between, initial);
+    .logo {
+      @include setFlex(flex, center, space-between, initial);
+
+      &-circle {
+        height: 3em;
+        width: 3em;
+        border-radius: 50%;
+        display: block;
+        background-color: $blue_bg;
+      }
+
+      h1 {
+        font-size: 1.75em;
+        font-weight: 600;
+        margin-left: 0.6em;
+        color: $text_one;
+
+        .lean {
+          font-weight: 300;
+        }
+      }
+    }
+
+    .timer {
+      font-size: 1.35em;
+      font-weight: 500;
+
+      &-box {
+        background-color: $dark_bg;
+        color: #fff;
+        height: 1.9em;
+        width: 1.3em;
+        @include setFlex(inline-flex, center, center, initial);
+        border-radius: 4px;
+        margin-left: -4px;
+      }
+      &-divider {
+        position: relative;
+        right: 2px;
+      }
+    }
+  }
+}
