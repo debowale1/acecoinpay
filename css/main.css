@@ -14,6 +14,7 @@ html {
 }
 
 .form-header {
+  margin-bottom: 5em;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -60,6 +61,76 @@ html {
 .form-header .timer-divider {
   position: relative;
   right: 2px;
+}
+.form-body form .input-group {
+  margin-bottom: 2em;
+}
+.form-body form .input-group .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+  margin-bottom: 1.8em;
+}
+.form-body form .input-group .header .description .title {
+  text-transform: capitalize;
+  font-weight: 700;
+  color: #05365c;
+  font-size: 1.1em;
+  margin-bottom: 0.4em;
+}
+.form-body form .input-group .header .description .desc {
+  color: #8e96a3;
+  font-size: 0.77em;
+  font-weight: 500;
+}
+.form-body form .input-group .header button.edit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+  color: #035fff;
+}
+.form-body form .input-group .header button.edit svg {
+  height: 0.9em;
+  fill: #035fff;
+}
+.form-body form .input-group .header button.edit .btn-desc {
+  display: block;
+  margin-left: 0.6em;
+  font-weight: 500;
+}
+.form-body form .input-group .main {
+  position: relative;
+  margin-top: 1em;
+}
+.form-body form .input-group .main img {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.form-body form .input-group .main img.leading-icon {
+  left: 1.2em;
+  height: 2em;
+}
+.form-body form .input-group .main img.trailing-icon {
+  right: 1.2em;
+  height: 1.5em;
+}
+.form-body form .input-group .main input {
+  border: 2px solid rgba(224, 224, 224, 0.5);
+  width: 100%;
+  padding: 1em 4em;
+  padding-left: 4.5em;
+  outline-color: #0077B6;
+  border-radius: 10px;
+  font-size: 1.1em;
+  font-weight: 600;
+  background: linear-gradient(45deg, #f8faf9, transparent);
+}
+.form-body form .input-group .main input::placeholder {
+  font-weight: 400;
+  opacity: 0.5;
 }
 
 /*# sourceMappingURL=main.css.map */
