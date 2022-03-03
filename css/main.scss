@@ -137,6 +137,68 @@ html {
             }
           }
         }
+
+        &.__col {
+          @include setFlex(flex, center, space-between, initial);
+
+          .header {
+            margin-bottom: 0;
+          }
+
+          .grp {
+            @include setFlex(flex, center, space-between, initial);
+            width: 400px;
+
+            .divider {
+              display: block;
+              margin: 0 0.8em;
+              font-size: 1.2em;
+              font-weight: 800;
+              color: $text_one;
+            }
+          }
+          .main {
+            width: 400px;
+            margin-top: 0;
+            input {
+              text-align: center;
+              padding-left: 0;
+              padding-right: 0;
+              background: none;
+              color: $active-border;
+
+              &:focus {
+                background: #edf3ff;
+              }
+            }
+
+            input[type='password'] {
+              text-align: left;
+              padding-left: 1.5em;
+              letter-spacing: 0.3em;
+            }
+
+            .trailing-icon {
+              opacity: 0.5;
+            }
+          }
+        }
+      }
+
+      .btn-submit {
+        background-color: $blue_bg;
+        padding: 1.2em 0;
+        width: 100%;
+        color: #fff;
+        border-radius: 6px;
+        text-transform: capitalize;
+        font-size: 1.2em;
+        font-weight: 500;
+        transition: all 250ms ease-in-out;
+
+        &:hover {
+          background-color: #0645b2;
+        }
       }
     }
   }

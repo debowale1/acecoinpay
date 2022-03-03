@@ -132,5 +132,64 @@ html {
   font-weight: 400;
   opacity: 0.5;
 }
+.form-body form .input-group.__col {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+}
+.form-body form .input-group.__col .header {
+  margin-bottom: 0;
+}
+.form-body form .input-group.__col .grp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+  width: 400px;
+}
+.form-body form .input-group.__col .grp .divider {
+  display: block;
+  margin: 0 0.8em;
+  font-size: 1.2em;
+  font-weight: 800;
+  color: #05365c;
+}
+.form-body form .input-group.__col .main {
+  width: 400px;
+  margin-top: 0;
+}
+.form-body form .input-group.__col .main input {
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+  background: none;
+  color: #0077B6;
+}
+.form-body form .input-group.__col .main input:focus {
+  background: #edf3ff;
+}
+.form-body form .input-group.__col .main input[type=password] {
+  text-align: left;
+  padding-left: 1.5em;
+  letter-spacing: 0.3em;
+}
+.form-body form .input-group.__col .main .trailing-icon {
+  opacity: 0.5;
+}
+.form-body form .btn-submit {
+  background-color: #035fff;
+  padding: 1.2em 0;
+  width: 100%;
+  color: #fff;
+  border-radius: 6px;
+  text-transform: capitalize;
+  font-size: 1.2em;
+  font-weight: 500;
+  transition: all 250ms ease-in-out;
+}
+.form-body form .btn-submit:hover {
+  background-color: #0645b2;
+}
 
 /*# sourceMappingURL=main.css.map */
