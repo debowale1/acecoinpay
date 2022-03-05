@@ -3,6 +3,12 @@ html {
   font-size: 16px;
 }
 
+body {
+  background-image: url("../assets/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
 .wrapper {
   font-family: "Poppins", sans-serif;
   max-width: 1200px;
@@ -11,6 +17,20 @@ html {
   background-color: #fff;
   position: relative;
   margin: 0 auto;
+}
+.wrapper::before {
+  content: "x";
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 3em;
+  height: 2.5em;
+  background-color: #f7f7f7;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  transition: background-color 250ms ease-in-out;
 }
 
 .form-header {
@@ -192,64 +212,67 @@ html {
   background-color: #0645b2;
 }
 
-.card-info {
+.order-info {
   position: relative;
   height: 100%;
   padding: 0 2em;
 }
-.card-info .card-body {
+.order-info .card-body {
   width: 230px;
   margin: 0 auto;
-  box-shadow: 0px 25px 23px -5px #e3e3e3;
+  box-shadow: 0px 20px 45px -5px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  background-image: linear-gradient(180deg, rgba(242, 246, 249, 0) 10%, #f2f6f9 240%);
+  background-color: white;
+  background-image: linear-gradient(180deg, rgba(242, 246, 249, 0) 34%, #f3f3f3 44%, #f2f6f9 75%);
   padding: 3em 1.2em;
   position: relative;
+  z-index: 2;
 }
-.card-info .card-body .grp {
+.order-info .card-body .grp {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: initial;
   margin-bottom: 4em;
 }
-.card-info .card-body .grp img.chip {
+.order-info .card-body .grp img.chip {
   height: 2.5em;
 }
-.card-info .card-body .grp img.wifi {
+.order-info .card-body .grp img.wifi {
   height: 1.5em;
 }
-.card-info .card-body .name-info .fullname {
+.order-info .card-body .name-info .fullname {
   text-transform: capitalize;
   font-size: 1em;
   color: #05365c;
   margin-bottom: 0.5em;
 }
-.card-info .card-body .card-expiry {
+.order-info .card-body .card-expiry {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: initial;
   margin-top: 1em;
 }
-.card-info .card-body .card-expiry .grp {
+.order-info .card-body .card-expiry .grp {
   margin-bottom: 0;
 }
-.card-info .card-body .card-expiry .grp .month,
-.card-info .card-body .card-expiry .grp .year {
+.order-info .card-body .card-expiry .grp .month,
+.order-info .card-body .card-expiry .grp .year {
   font-size: 1em;
   font-weight: 500;
   color: #05365c;
 }
-.card-info .card-body .card-expiry .grp .divider {
+.order-info .card-body .card-expiry .grp .divider {
   font-weight: 700;
   font-size: 0.9em;
   color: #05365c;
+  margin: 0 0.2em;
 }
-.card-info .card-body .card-expiry svg {
+.order-info .card-body .card-expiry svg {
   height: 2em;
 }
-.card-info .card-body::before {
+.order-info .card-body::before {
   content: "";
   display: block;
   width: 50px;
@@ -260,6 +283,98 @@ html {
   transform: translate(-50%, 0);
   background-color: #035fff;
   box-shadow: 0 10px 20px #035fff;
+}
+.order-info .purchase-info {
+  background: linear-gradient(180deg, #e7eaf0, #eff5f9);
+  border-radius: 10px;
+  padding: 12em 0 0;
+  position: relative;
+  z-index: 1;
+  margin-top: -12em;
+}
+.order-info .purchase-info .product-summary {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2em 0;
+}
+.order-info .purchase-info .product-summary .grp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+  margin-bottom: 1em;
+}
+.order-info .purchase-info .product-summary .grp .key {
+  color: #8e96a3;
+  font-size: 1em;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.order-info .purchase-info .product-summary .grp .value {
+  text-transform: capitalize;
+  font-weight: 600;
+  color: #05365c;
+  font-size: 1em;
+}
+.order-info .purchase-info .product-summary .grp .value.with-logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+}
+.order-info .purchase-info .product-summary .grp .value.with-logo img {
+  width: 1.3em;
+  margin-right: 0.3em;
+}
+.order-info .purchase-info .payment-info {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2em 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+  border-top: 2px dashed rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+.order-info .purchase-info .payment-info .amount .title {
+  color: #8e96a3;
+  font-size: 1em;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.order-info .purchase-info .payment-info .amount .total {
+  text-transform: capitalize;
+  font-weight: 700;
+  color: #05365c;
+  font-size: 2em;
+}
+.order-info .purchase-info .payment-info .amount .total span {
+  font-size: 0.5em;
+  font-weight: 500;
+}
+.order-info .purchase-info .payment-info img {
+  width: 2em;
+}
+.order-info .purchase-info .payment-info::before {
+  content: "";
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: -25px;
+  left: -50px;
+}
+.order-info .purchase-info .payment-info::after {
+  content: "";
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: -25px;
+  right: -50px;
 }
 
 /*# sourceMappingURL=main.css.map */

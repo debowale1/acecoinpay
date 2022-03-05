@@ -7,6 +7,12 @@ html {
   font-size: 16px;
 }
 
+body {
+  background-image: url('../assets/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
 .wrapper {
   font-family: $poppins;
   max-width: 1200px;
@@ -15,6 +21,21 @@ html {
   background-color: #fff;
   position: relative;
   margin: 0 auto;
+
+  &::before {
+    content: 'x';
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3em;
+    height: 2.5em;
+    background-color: #f7f7f7;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    transition: background-color 250ms ease-in-out;
+  }
 }
 
 .form {
@@ -204,7 +225,7 @@ html {
   }
 }
 
-.card-info {
+.order-info {
   position: relative;
   height: 100%;
   padding: 0 2em;
@@ -213,15 +234,19 @@ html {
     width: 230px;
     margin: 0 auto;
     // border: 1px solid $input-border;
-    box-shadow: 0px 25px 23px -5px #e3e3e3;
+    box-shadow: 0px 20px 45px -5px rgba(#000, 0.2);
     border-radius: 10px;
+
+    background-color: rgba(255, 255, 255, 1);
     background-image: linear-gradient(
       180deg,
-      rgba(242, 246, 249, 0) 10%,
-      #f2f6f9 240%
+      rgba(242, 246, 249, 0) 34%,
+      #f3f3f3 44%,
+      #f2f6f9 75%
     );
     padding: 3em 1.2em;
     position: relative;
+    z-index: 2;
     .grp {
       @include setFlex(flex, center, space-between, initial);
       margin-bottom: 4em;
@@ -259,6 +284,7 @@ html {
           font-weight: 700;
           font-size: 0.9em;
           color: $text_one;
+          margin: 0 0.2em;
         }
       }
 
@@ -278,6 +304,100 @@ html {
       transform: translate(-50%, 0);
       background-color: $blue_bg;
       box-shadow: 0 10px 20px $blue_bg;
+    }
+  }
+
+  .purchase-info {
+    background: linear-gradient(180deg, #e7eaf0, #eff5f9);
+    border-radius: 10px;
+    padding: 12em 0 0;
+    position: relative;
+    z-index: 1;
+    margin-top: -12em;
+
+    .product-summary {
+      width: 80%;
+      margin: 0 auto;
+      padding: 2em 0;
+      .grp {
+        @include setFlex(flex, center, space-between, initial);
+        margin-bottom: 1em;
+        .key {
+          color: $text_two;
+          font-size: 1em;
+          font-weight: 600;
+          text-transform: capitalize;
+        }
+
+        .value {
+          text-transform: capitalize;
+          font-weight: 600;
+          color: $text_one;
+          font-size: 1em;
+
+          &.with-logo {
+            @include setFlex(flex, center, space-between, initial);
+            img {
+              width: 1.3em;
+              margin-right: 0.3em;
+            }
+          }
+        }
+      }
+    }
+
+    .payment-info {
+      width: 80%;
+      margin: 0 auto;
+      padding: 2em 0;
+      @include setFlex(flex, center, space-between, initial);
+      border-top: 2px dashed rgba(0, 0, 0, 0.15);
+      position: relative;
+
+      .amount {
+        .title {
+          color: $text_two;
+          font-size: 1em;
+          font-weight: 600;
+          text-transform: capitalize;
+        }
+        .total {
+          text-transform: capitalize;
+          font-weight: 700;
+          color: $text_one;
+          font-size: 2em;
+
+          span {
+            font-size: 0.5em;
+            font-weight: 500;
+          }
+        }
+      }
+
+      img {
+        width: 2em;
+      }
+
+      &::before {
+        content: '';
+        width: 2.5em;
+        height: 2.5em;
+        border-radius: 50%;
+        background-color: #fff;
+        position: absolute;
+        top: -25px;
+        left: -50px;
+      }
+      &::after {
+        content: '';
+        width: 2.5em;
+        height: 2.5em;
+        border-radius: 50%;
+        background-color: #fff;
+        position: absolute;
+        top: -25px;
+        right: -50px;
+      }
     }
   }
 }
