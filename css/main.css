@@ -192,4 +192,74 @@ html {
   background-color: #0645b2;
 }
 
+.card-info {
+  position: relative;
+  height: 100%;
+  padding: 0 2em;
+}
+.card-info .card-body {
+  width: 230px;
+  margin: 0 auto;
+  box-shadow: 0px 25px 23px -5px #e3e3e3;
+  border-radius: 10px;
+  background-image: linear-gradient(180deg, rgba(242, 246, 249, 0) 10%, #f2f6f9 240%);
+  padding: 3em 1.2em;
+  position: relative;
+}
+.card-info .card-body .grp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+  margin-bottom: 4em;
+}
+.card-info .card-body .grp img.chip {
+  height: 2.5em;
+}
+.card-info .card-body .grp img.wifi {
+  height: 1.5em;
+}
+.card-info .card-body .name-info .fullname {
+  text-transform: capitalize;
+  font-size: 1em;
+  color: #05365c;
+  margin-bottom: 0.5em;
+}
+.card-info .card-body .card-expiry {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+  margin-top: 1em;
+}
+.card-info .card-body .card-expiry .grp {
+  margin-bottom: 0;
+}
+.card-info .card-body .card-expiry .grp .month,
+.card-info .card-body .card-expiry .grp .year {
+  font-size: 1em;
+  font-weight: 500;
+  color: #05365c;
+}
+.card-info .card-body .card-expiry .grp .divider {
+  font-weight: 700;
+  font-size: 0.9em;
+  color: #05365c;
+}
+.card-info .card-body .card-expiry svg {
+  height: 2em;
+}
+.card-info .card-body::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 5px;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: #035fff;
+  box-shadow: 0 10px 20px #035fff;
+}
+
 /*# sourceMappingURL=main.css.map */
